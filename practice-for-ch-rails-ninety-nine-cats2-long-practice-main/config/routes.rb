@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # root "articles#index"
   root "cats#index"
 
+  resources :users
+  resources :session
   resources :cats, except: :destroy do
     resources :cat_rental_requests, only: [:new]
   end
